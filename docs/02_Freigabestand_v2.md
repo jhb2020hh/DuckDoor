@@ -40,7 +40,7 @@ Bei Widerspruch gilt dieses Dokument vor v1. Kennzeichnung [A] = Annahme.
 ## 2 Offene Punkte (blockieren den Entwurf nicht)
 | Nr | Punkt | Annahme für Entwurf |
 |---|---|---|
-| O1 | Tiefste Standorttemperatur (Lichtschranke nur bis −20 °C spezifiziert) | −20 °C [A] |
+| O1 | Standort **PLZ 22397 Hamburg** (Duvenstedt/Wohldorf-Ohlstedt/Lemsahl-Mellingstedt), Koordinaten für Astro ≈ 53,70° N / 10,10° E [A, auf Grundstück präzisieren]. Rekord-Tiefstwert Hamburg-Fuhlsbüttel −29,1 °C (13.02.1940, DWD-Daten lt. Sekundärquelle). Norm-Außentemperatur DIN/TS 12831-1 für 22397 nicht belegt (BWP-Klimakarte prüfen). | **Auslegung −25 °C** [A]; Feldgeräte (Lichtschranke) mit ≥ −25 °C wählen oder Ersatz für Marantec 99165 (nur −20 °C) suchen; bei Messwert < −25 °C Störmeldung |
 | O2 | Isolations-/Datenblattwerte Netzteil, Lichtschranke, Motor-Kennlinie 24 V am Original prüfen | gem. Review |
 | O3 | Anwendbarkeit DIN VDE 0100-705 (landwirtschaftl. Betriebsstätte) durch Errichter | Schutzpotentialausgleich Rahmen vorgesehen |
 | O4 | Supabase-Angaben (Limits) am Original prüfen | gem. Review |
