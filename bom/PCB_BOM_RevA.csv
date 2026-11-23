@@ -1,0 +1,49 @@
+Referenz;Wert;Footprint/Bauform;Hersteller-Teilenr.;Menge;Bemerkung;Richtpreis € brutto/Stk;Summe €;Quelle;Status
+U1;ESP32-WROOM-32UE-N8, 8 MB Flash, U.FL;Modul 18×31,4;Espressif ESP32-WROOM-32UE-N8;1;"Chip-Rev. ≥ V3 [verif.]; Antennenseite ohne Kupfer nicht nötig (U.FL)";5,49;5,49;Digi-Key DE 4,61 € netto https://www.digikey.de/en/products/detail/espressif-systems/ESP32-WROOM-32UE-N8/11613142;belegt
+U2;TMC2209 StepStick inkl. Kühlkörper;Steckmodul 2×8 RM 2,54;BIGTREETECH TMC2209 V1.3;1;"≤ 1,0 A RMS; UART-Modus (Lötbrücke prüfen); Alt. TMC2240-Modul";6,90;6,90;Botland 6,90 € inkl. MwSt. https://botland.store/stepstick-stepper-motor-controllers/19883-bigtreetech-tmc2209-v13-stepper-motor-driver-5904422379667.html;belegt
+J_U2;Buchsenleiste 1×8 RM 2,54;THT;z. B. Würth 61300811821 [A];2;Sockel für U2;0,40;0,80;Schätzung;Annahme
+U3–U6, U11;ISO1212 2-Kanal-Digitaleingang isoliert;SSOP-16 (DBQ);TI ISO1212DBQR;5;IN1–IN9 + Reserve IN10;1,32;6,60;Mouser 595-ISO1212DBQR ≈ 1,11 € netto https://www.mouser.ie/c/semiconductors/interface-ics/digital-isolators?pg=47;belegt
+R_SENSE1–10;R_SENSE nach Datenblatt Typ 3 (Richtwert 562 Ω);0805;Yageo RC0805FR-07562RL [A];10;Wert nach SLLSEY7 Tab. IEC 61131-2 Typ 3 [verif.];0,05;0,50;Schätzung;Annahme
+R_THR1–10;R_THR Typ 3 (Richtwert 1 kΩ, 0,5 W Impulsfest);1206;Yageo RC1206FR-071KL [A];10;[verif.] Datenblatt;0,05;0,50;Schätzung;Annahme
+D_IN1–10;TVS 33 V unidirektional, 600 W;SMB (DO-214AA);Littelfuse SMBJ33A;10;je Feldeingang gegen 0 V (FGND);0,35;3,50;Schätzung;Annahme
+D_PWR1–2;TVS 33 V unidirektional, 600 W;SMB;Littelfuse SMBJ33A;2;"24V_IN und 24V_FLD; Klemmspannung vs. Vin max DC/DC prüfen (offener Punkt)";0,35;0,70;Schätzung;Annahme
+U7;RTC DS3231SN −40…+85 °C, TCXO;SOIC-16W;Analog Devices DS3231SN#;1;Bezug nur Distributor, kein Modul (R2-M3);14,83;14,83;Digi-Key DE 12,46 € netto https://www.digikey.de/en/products/detail/analog-devices-inc-maxim-integrated/DS3231SN/1197576;belegt
+BT1;Batteriehalter CR2032 SMD;SMD;Keystone 3034 [A];1;Alt. Superkondensator (R2-G4);1,20;1,20;Schätzung;Annahme
+BT1a;Knopfzelle CR2032;–;Varta/Renata CR2032;1;;1,00;1,00;Schätzung;Annahme
+U13;I²C-1-Wire-Master;SOIC-8;Analog Devices DS2482S-100+;1;"für -B9 DS18B20; ESD am Stecker";3,09;3,09;Digi-Key DE ≈ 2,60 € netto https://www.digikey.de/en/products/detail/analog-devices-inc-maxim-integrated/DS2482S-100/1197435;belegt
+D_1W;ESD-Schutzdiode 1-Wire DQ;SOD-323;Nexperia PESD5V0S1BA [A];1;an -X2:46;0,20;0,20;Schätzung;Annahme
+U8;Temperatur-/Feuchtesensor Kasten;DFN-4 1,5×1,5;Sensirion SHT40-AD1B-R2 [A];1;"aus Betriebsmittelliste; Platzierung fern von Wärmequellen";3,50;3,50;Schätzung;Annahme
+U10;I²C-Port-Expander 8 Bit;TSSOP-16;TI TCA9534PWR;1;P0 Status-LED -P1, P1–P7 Reserve;1,20;1,20;Schätzung;Annahme
+U12a, U12b;AND-Gatter;SOT-353 (SC-70-5);Nexperia 74LVC1G08GW;2;Hardware-Sperre ZU (ENN-Logik);0,30;0,60;Schätzung;Annahme
+U12c, U12d;OR-Gatter;SOT-353;Nexperia 74LVC1G32GW;2;Hardware-Sperre ZU;0,30;0,60;Schätzung;Annahme
+U12e;NAND-Gatter;SOT-353;Nexperia 74LVC1G00GW;1;ENN-Ausgang, Pull-up 10 kΩ (Reset = gesperrt);0,30;0,30;Schätzung;Annahme
+U14;DC/DC 24 → 5 V, 1 A, Synchronwandler;SIP-3;TRACO POWER TSR 1-2450;1;"Vin 6,5–36 V; Typ offen lt. EL (Vin max vs. TVS-Klemmspannung prüfen)";6,97;6,97;Farnell ab ≈ 5,86 € netto https://ie.farnell.com/tracopower/tsr-1-2450/converter-dc-dc-5v-1a-sip/dp/1696320;Typ offen
+U15;LDO 3,3 V, 1 A;SOT-223;Diodes AP7361C-33E-13 [A];1;"≥ 600 mA gefordert; Typ offen lt. EL";0,50;0,50;Schätzung;Typ offen
+Q1;P-MOSFET −40 V Verpolschutz 24V_IN;TO-252 (DPAK);Diodes DMP4015SK3-13 [A];1;mit Z-Diode 12 V + 100 kΩ Gate;0,80;0,80;Schätzung;Annahme
+Q3;P-MOSFET −40 V LS-Sender-Test (-X2:30);TO-252;Diodes DMP4015SK3-13 [A];1;Ansteuerung über Q4 (NPN), Pulldown → Sender beim Booten EIN;0,80;0,80;Schätzung;Annahme
+Q4;NPN-Treiber;SOT-23;Nexperia BC847C;1;für Q3;0,05;0,05;Schätzung;Annahme
+Q2;N-MOSFET Logic-Level 40 V, ≥ 5 A, Heizung Low-Side;TO-252;Infineon IPD50N04S4L-08 [A];1;"Gate-Pulldown 100 kΩ; R_DS(on) bei V_GS 3,3 V prüfen [verif.]";0,90;0,90;Schätzung;Annahme
+DZ1;Z-Diode 12 V (Gate-Schutz Q1/Q3);SOD-123;Nexperia BZX84-C12 / MMSZ5242B [A];2;;0,05;0,10;Schätzung;Annahme
+F1;SMD-Sicherung 1 A flink, 24V_IN (nach -F13, Platinenschutz);1206;Littelfuse 0466001.NR [A];1;;0,40;0,40;Schätzung;Annahme
+F2;PTC rückstellend 0,2 A / 60 V, Ausgang LS_TX;Radial/1812;Bourns MF-R020 [A];1;Kurzschlussschutz Senderleitung;0,30;0,30;Schätzung;Annahme
+F3;PTC rückstellend 0,1 A, 3,3 V zu -B9 (-X2:45);1206;Bourns MF-MSMF010-2 [A];1;Kurzschlussschutz Außenleitung;0,30;0,30;Schätzung;Annahme
+L1;Speicherdrossel/LC-Filter 10 µH, ≥ 2 A;SMD 7×7;Würth 744777100 [A];1;Eingangsfilter 24V_IN;1,00;1,00;Schätzung;Annahme
+C_VM;Elko 470 µF / 35 V Low-ESR;Radial 10×16;Panasonic EEU-FR1V471 [A];1;VM TMC (R2-M2);0,90;0,90;Schätzung;Annahme
+C_IN;Elko 47 µF / 50 V;Radial 6,3×11;Panasonic EEU-FR1H470 [A];2;24V_IN, 5 V;0,40;0,80;Schätzung;Annahme
+C_x;Kerko 100 nF / 50 V X7R;0805;Samsung CL21B104KBCNNNC [A];30;Abblockung;0,03;0,90;Schätzung;Annahme
+C_y;Kerko 10 µF / 25 V X7R;1206;Samsung CL31B106KAHNNNE [A];8;LDO, ESP32, DC/DC;0,10;0,80;Schätzung;Annahme
+C_z;Kerko 1 µF / 50 V X7R;0805;[A];6;ISO1212, Auto-Reset;0,05;0,30;Schätzung;Annahme
+R_x;Widerstandssortiment 0805 1 %: 4,7 kΩ (I²C 2×), 10 kΩ (≈ 10×), 100 kΩ (3×), 100 Ω (STEP), 1 kΩ (UART), LED-Vorwiderstände;0805;Yageo RC0805 [A];25;;0,03;0,75;Schätzung;Annahme
+D_LED1–2;LED grün/rot (Power, Fehler);0805;[A];2;Platinendiagnose;0,10;0,20;Schätzung;Annahme
+SW1, SW2;Taster EN/BOOT;SMD 6×6;[A];2;Programmierung;0,20;0,40;Schätzung;Annahme
+Q5, Q6;Auto-Reset NPN-Paar;SOT-23;Nexperia BC847C;2;EN/IO0 über DTR/RTS;0,05;0,10;Schätzung;Annahme
+J1;Programmier-Header 1×6 RM 2,54 (GND, 3V3, TX0, RX0, EN, IO0);THT;[A];1;;0,20;0,20;Schätzung;Annahme
+J2–J4;Leiterplatten-Steckklemme 10-pol RM 3,81, Stiftleiste + Stecker;THT;Phoenix Contact MC 1,5/10-G-3,81 + MC 1,5/10-ST-3,81 [A];3;Eingänge IN1–IN10, FGND, 24V_FLD, LS_TX, HEAT, B9;4,50;13,50;Schätzung;Annahme
+J5–J6;Leiterplatten-Steckklemme 4-pol RM 5,08, Stiftleiste + Stecker;THT;Phoenix Contact MSTB 2,5/4-G-5,08 + MSTB 2,5/4-ST-5,08 [A];2;"Motor A1/A2/B1/B2; VM/GND + 24V_IN/GND";3,00;6,00;Schätzung;Annahme
+J7;JST-SH 4-pol (STEMMA QT) für Lux-Breakout;SMD;JST SM04B-SRSS-TB [A];1;I²C intern zu -B5;0,40;0,40;Schätzung;Annahme
+B5;Lux-Sensor-Breakout VEML7700 (−25…+85 °C);Breakout 25×18;Adafruit 4162;1;"hinter Deckelfenster; Alt. BH1750-Breakout";5,07;5,07;Mouser 485-4162 ≈ 4,26 € netto https://www.mouser.com/ProductDetail/485-4162;belegt
+W_B5;STEMMA-QT/Qwiic-Kabel 4-pol, 200 mm;–;Adafruit 4401 [A];1;-A1 J7 → -B5;1,50;1,50;Schätzung;Annahme
+PCB;Leiterplatte 2-lagig FR4 1,6 mm, HASL bleifrei, ≈ 120×100 mm, 5 Stk + Versand DE;–;JLCPCB (Alt. Aisler);1;"Mindestmenge 5; > 100×100 mm teurer; Preis inkl. DHL-Versand geschätzt";30,00;30,00;JLCPCB ab 2 $/5 St. ≤100×100 + Versand https://jlcpcb.com/help/article/How-do-I-place-an-order;Annahme
+STENCIL;SMD-Schablone (optional);–;JLCPCB;1;"für Lötpaste; Handbestückung Bauherr";10,00;10,00;Schätzung;Annahme
+TOOL;USB-UART-Adapter 3,3 V mit DTR/RTS (Programmierung);–;z. B. CP2102-Adapter [A];1;Werkzeug, einmalig;6,00;6,00;Schätzung;Annahme
+SUMME;;;;;Bauteile + Fertigung -A1;;141,45;;
