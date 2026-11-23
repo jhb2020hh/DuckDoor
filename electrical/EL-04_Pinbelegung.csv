@@ -1,0 +1,30 @@
+ESP32-GPIO;Funktion;Richtung;Bemerkung
+GPIO36 (VP);IN1 B1 Schieber unten;E;ISO1212-Ausgang treibt aktiv, nur Eingang, kein Pull-up
+GPIO39 (VN);IN2 B2 Schieber oben;E;ISO1212, nur Eingang
+GPIO34;IN3 B3 Mutter oben;E;ISO1212, nur Eingang
+GPIO35;IN4 B4 Mutter unten;E;ISO1212, nur Eingang
+GPIO32;IN5 B6 Lichtschranke frei (B6_FREI);E;ISO1212, zusätzlich Hardware-Sperre ZU
+GPIO4;IN6 B8 Schlaffschalter;E;ISO1212 -A1.U11 [A], ersetzt 1-Wire aus 12_R2 (DS18B20 nun über DS2482-100 am I²C) [A]
+GPIO33;IN7 K1_OK Schaltleiste;E;ISO1212, zusätzlich Hardware-Sperre ZU
+GPIO13;IN8 Taster AUF (S1);E;ISO1212
+GPIO14;IN9 Taster ZU (S2);E;ISO1212, PWM beim Booten, als Eingang unkritisch [A]
+GPIO26;TMC STEP;A;Serien-R 100 Ω
+GPIO27;TMC DIR (DIR_AUF);A;zusätzlich Eingang Hardware-Sperre, Polarität fest verdrahtet, shaft-Bit = 0 rücklesen
+GPIO25;TMC EN_CPU;A;über Gatterlogik -A1.U12 auf ENN, ENN-Pull-up 10 kΩ (Reset = gesperrt)
+GPIO17;UART2 TX → TMC PDN_UART;A;1 kΩ zur Eindraht-UART
+GPIO16;UART2 RX ← TMC PDN_UART;E;
+GPIO19;TMC DIAG (StallGuard);E;
+GPIO21;I²C SDA;E/A;4,7 kΩ, DS3231SN, SHT4x, TCA9534, DS2482-100, Lux -B5 (Steckverbinder intern)
+GPIO22;I²C SCL;A;4,7 kΩ
+GPIO18;LS-Test: Sender -B6.1 AUS;A;P-MOSFET-Treiber, Pulldown → Sender beim Booten EIN
+GPIO23;Heizung -E1 MOSFET;A;Gate-Pulldown 100 kΩ → beim Booten AUS
+EN;Reset / Programmierung;E;Auto-Reset-Schaltung, Prog.-Header
+GPIO0 (IO0);Boot / Programmierung;E;Strapping – nur Prog.-Header, sonst unbelegt
+GPIO1 (TX0) / GPIO3 (RX0);UART0 Programmierung;A/E;nur Prog.-Header
+GPIO2;nicht belegt;–;Strapping-Pin gemieden
+GPIO5;nicht belegt;–;Strapping-Pin gemieden
+GPIO12;nicht belegt;–;Strapping-Pin (MTDI, Flash-Spannung) gemieden
+GPIO15;nicht belegt;–;Strapping-Pin gemieden
+GPIO6…11;nicht belegt;–;intern SPI-Flash
+TCA9534 P0;Status-LED -P1;A;I²C-Expander -A1.U10 [A]
+TCA9534 P1…P7;Reserve;E/A;

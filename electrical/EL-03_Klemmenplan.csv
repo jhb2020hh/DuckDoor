@@ -1,0 +1,56 @@
+Klemme;Potential/Signal;Ziel-BMK;Leitung;Querschnitt;Bemerkung
+-X1:1;L Einspeisung 230 V;intern -Q1:1 / extern -W1 br → +UV -F01;NYY-J 3×1,5;1,5 mm²;Netzbereich abgedeckt, Trennsteg zu SELV
+-X1:2;N Einspeisung 230 V;intern -Q1:3 / extern -W1 bl → +UV N;NYY-J 3×1,5;1,5 mm²;
+-X1:PE;PE;intern -X0 / extern -W1 gn/ge → +UV PE;NYY-J 3×1,5;1,5 mm²;
+-X1:3;L' nach LS;-F1:2 → -T1:L;H07V-K;1,5 mm²;
+-X1:4;N' nach LS;-F1:N → -T1:N;H07V-K;1,5 mm²;
+-X0:1;PE Einspeisung;-X1:PE;H07V-K gn/ge;1,5 mm²;PE-Schiene / Potentialausgleich
+-X0:2;PE -T1;-T1:PE;H07V-K gn/ge;1,5 mm²;nur falls HDR-100-24 Schutzklasse I [verif.]
+-X0:3;Schutzpotentialausgleich;+R Rahmen/Pfosten/Schwelle/Sturzblende;-W30 H07V-K gn/ge;≥ 4 mm² Cu;VDE 0100-540/-705 [N-verif.], Freigabe O3
+-X0:4;PE Reserve;–;–;–;Reserve
+-F11:1/2;+24 V Motortreiber;-T1:+V → -A1:VM;H07V-K;0,75 mm²;Sicherungsklemme 5×20, 2 A T [A]
+-F12:1/2;+24 V Heizung;-T1:+V → -B10;H07V-K;0,75 mm²;Sicherungsklemme 5×20, 1,25 A T [A]
+-F13:1/2;+24 V Elektronik;-T1:+V → -A1:24V_IN;H07V-K;0,75 mm²;Sicherungsklemme 5×20, 1 A T [A]
+-F14:1/2;+24 V Feldsensorik;-T1:+V → -X2:+24V-Feld, -A1:24V_FLD;H07V-K;0,75 mm²;Sicherungsklemme 5×20, 0,5 A T [A]
+-F15:1/2;+24 V Auswerter;-T1:+V → -K1:A1;H07V-K;0,75 mm²;Sicherungsklemme 5×20, 0,5 A T [A]
+-X2:1;Motor A+;-A1.U2:A1 / -M1 Spule A;-W11 PUR 4×0,5 geschirmt [A];0,5 mm²;Motorstecker verriegelbar, nie unter Spannung trennen
+-X2:2;Motor A−;-A1.U2:A2 / -M1 Spule A;-W11;0,5 mm²;
+-X2:3;Motor B+;-A1.U2:B1 / -M1 Spule B;-W11;0,5 mm²;
+-X2:4;Motor B−;-A1.U2:B2 / -M1 Spule B;-W11;0,5 mm²;
+-X2:5;Schirm Motor;EMV-Kabelverschraubung;-W11;–;Schirm großflächig auflegen, nicht an 0 V [A]
+-X2:10;+24 V B1;-F14 / -B1;-W12 PUR 3×0,34 [A];0,34 mm²;B1 Schieber unten, +R
+-X2:11;Signal B1;-A1:IN1 / -B1;-W12;0,34 mm²;ISO1212 → GPIO36
+-X2:12;0 V B1;0V-Kamm / -B1;-W12;0,34 mm²;
+-X2:13;+24 V B2;-F14 / -B2;-W13 PUR 3×0,34 [A];0,34 mm²;B2 Schieber oben, +R
+-X2:14;Signal B2;-A1:IN2 / -B2;-W13;0,34 mm²;ISO1212 → GPIO39
+-X2:15;0 V B2;0V-Kamm / -B2;-W13;0,34 mm²;
+-X2:16;+24 V B3;-F14 / -B3;-W14 PUR 3×0,34 [A];0,34 mm²;B3 Mutter oben, +M
+-X2:17;Signal B3;-A1:IN3 / -B3;-W14;0,34 mm²;ISO1212 → GPIO34
+-X2:18;0 V B3;0V-Kamm / -B3;-W14;0,34 mm²;
+-X2:19;+24 V B4;-F14 / -B4;-W15 PUR 3×0,34 [A];0,34 mm²;B4 Mutter unten, +M
+-X2:20;Signal B4;-A1:IN4 / -B4;-W15;0,34 mm²;ISO1212 → GPIO35
+-X2:21;0 V B4;0V-Kamm / -B4;-W15;0,34 mm²;
+-X2:22…28;entfällt;–;–;–;Lux -B5 hinter Deckelfenster im Gehäuse (Freigabe E5), kein Außenkabel, Klemmen als Reserve
+-X2:30;+24 V LS-Sender (getestet);-A1:LS_TX (P-MOSFET, GPIO18) / -B6.1;-W16 PUR 2×0,5 [A];0,5 mm²;Sender vor jedem Schließen abgeschaltet (Test)
+-X2:31;0 V LS-Sender;0V-Kamm / -B6.1;-W16;0,5 mm²;
+-X2:32;+24 V LS-Empfänger;-F14 / -B6.2;-W17 PUR 4×0,5 [A];0,5 mm²;Marantec 99165 (−20…+60 °C)
+-X2:33;0 V LS-Empfänger;0V-Kamm / -B6.2;-W17;0,5 mm²;
+-X2:34;LS-Relais COM;-F14 (+24 V) / -B6.2 COM;-W17;0,5 mm²;
+-X2:35;LS-Relais NO (frei = geschlossen);-A1:IN5 / -B6.2 NO;-W17;0,5 mm²;B6_FREI → ISO1212 → GPIO32 + Hardware-Sperre
+-X2:37;Schaltleiste 8k2;-K1 Eingang / -B7;-W18 2×0,5 (Spiral-/Schleppkabel);0,5 mm²;ASO SENTIR edge 8,2 kΩ
+-X2:38;Schaltleiste 8k2;-K1 Eingang / -B7;-W18;0,5 mm²;
+-X2:40;Heizung +;-B10 (Bimetall) / -E1;H07V-K intern;0,75 mm²;-E1 im Kasten +K1
+-X2:41;Heizung − (geschaltet);-A1:HEAT (Low-Side-MOSFET) / -E1;H07V-K intern;0,75 mm²;GPIO23
+-X2:42;+24 V B8;-F14 / -B8;-W21 PUR 3×0,34 [A];0,34 mm²;B8 Schlaffschalter, +M [A Belegung]
+-X2:43;Signal B8;-A1:IN6 / -B8;-W21;0,34 mm²;ISO1212 (-A1.U11) → GPIO4 [A], Kontakt geschlossen = Bolzen anliegend [A]
+-X2:44;0 V B8 / Reserve;0V-Kamm / -B8;-W21;0,34 mm²;bei Mikroschalter (2-Leiter) Reserve
+-X2:45;+3,3 V B9;-A1 (DS2482-100) / -B9 VDD;-W22 PUR 3×0,34 geschirmt [A];0,34 mm²;Außentemperatur DS18B20, +A
+-X2:46;1-Wire DQ B9;-A1.U13 DS2482-100 / -B9 DQ;-W22;0,34 mm²;TVS/ESD am Stecker [A]
+-X2:47;GND B9;-A1 GND / -B9 GND;-W22;0,34 mm²;Schirm einseitig an -A1 GND [A]
+-X2:50;+24 V Taster;-F14 / -S1, -S2;-W23 Einzeladern intern [A];0,5 mm²;Taster im Deckel +K1
+-X2:51;Taster AUF;-A1:IN8 / -S1;-W23;0,5 mm²;ISO1212 → GPIO13
+-X2:52;Taster ZU;-A1:IN9 / -S2;-W23;0,5 mm²;ISO1212 → GPIO14
+-X2:0V;0 V Brückenkamm;-T1:−V, -A1:GND, alle 0-V-Klemmen;H07V-K;0,75 mm²;SELV – 0 V NICHT mit PE verbinden
+-K1:A1/A2;+24 V / 0 V Auswerter;-F15 / 0V-Kamm;H07V-K intern;0,5 mm²;Sensotek SAE-41-312-A
+-K1:13;Sicherheitskontakt (Speisung);-F15 (+24 V) [A];H07V-K intern;0,5 mm²;
+-K1:14;K1_OK;-A1:IN7;H07V-K intern;0,5 mm²;ISO1212 → GPIO33 + Hardware-Sperre
