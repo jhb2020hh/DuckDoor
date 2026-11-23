@@ -19,7 +19,7 @@ Klemme;Potential/Signal;Ziel-BMK;Leitung;Querschnitt;Bemerkung
 -X2:4;Motor B−;-A1.U2:B2 / -M1 Spule B;-W11;0,5 mm²;
 -X2:5;Schirm Motor;EMV-Kabelverschraubung;-W11;–;Schirm großflächig auflegen, nicht an 0 V [A]
 -X2:10;+24 V B1;-F14 / -B1;-W12 PUR 3×0,34 [A];0,34 mm²;B1 Schieber unten, +R
--X2:11;Signal B1;-A1:IN1 / -B1;-W12;0,34 mm²;ISO1212 → GPIO36
+-X2:11;Signal B1;-A1:IN1 / -B1;-W12;0,34 mm²;ISO1212 → GPIO36 + Hardware-Sperre (B1_UNTEN hebt B8-Sperre auf)
 -X2:12;0 V B1;0V-Kamm / -B1;-W12;0,34 mm²;
 -X2:13;+24 V B2;-F14 / -B2;-W13 PUR 3×0,34 [A];0,34 mm²;B2 Schieber oben, +R
 -X2:14;Signal B2;-A1:IN2 / -B2;-W13;0,34 mm²;ISO1212 → GPIO39
@@ -30,7 +30,6 @@ Klemme;Potential/Signal;Ziel-BMK;Leitung;Querschnitt;Bemerkung
 -X2:19;+24 V B4;-F14 / -B4;-W15 PUR 3×0,34 [A];0,34 mm²;B4 Mutter unten, +M
 -X2:20;Signal B4;-A1:IN4 / -B4;-W15;0,34 mm²;ISO1212 → GPIO35
 -X2:21;0 V B4;0V-Kamm / -B4;-W15;0,34 mm²;
--X2:22…28;entfällt;–;–;–;Lux -B5 hinter Deckelfenster im Gehäuse (Freigabe E5), kein Außenkabel, Klemmen als Reserve
 -X2:30;+24 V LS-Sender (getestet);-A1:LS_TX (P-MOSFET, GPIO18) / -B6.1;-W16 PUR 2×0,5 [A];0,5 mm²;Sender vor jedem Schließen abgeschaltet (Test)
 -X2:31;0 V LS-Sender;0V-Kamm / -B6.1;-W16;0,5 mm²;
 -X2:32;+24 V LS-Empfänger;-F14 / -B6.2;-W17 PUR 4×0,5 [A];0,5 mm²;Marantec 99165 (−20…+60 °C)
@@ -42,7 +41,7 @@ Klemme;Potential/Signal;Ziel-BMK;Leitung;Querschnitt;Bemerkung
 -X2:40;Heizung +;-B10 (Bimetall) / -E1;H07V-K intern;0,75 mm²;-E1 im Kasten +K1
 -X2:41;Heizung − (geschaltet);-A1:HEAT (Low-Side-MOSFET) / -E1;H07V-K intern;0,75 mm²;GPIO23
 -X2:42;+24 V B8;-F14 / -B8;-W21 PUR 3×0,34 [A];0,34 mm²;B8 Schlaffschalter, +M [A Belegung]
--X2:43;Signal B8;-A1:IN6 / -B8;-W21;0,34 mm²;ISO1212 (-A1.U11) → GPIO4 [A], Kontakt geschlossen = Bolzen anliegend [A]
+-X2:43;Signal B8;-A1:IN6 / -B8;-W21;0,34 mm²;ISO1212 (-A1.U11) → GPIO4 [A] + Hardware-Sperre ZU (B8 ∧ ¬B1), Kontakt geschlossen = Bolzen anliegend [A]
 -X2:44;0 V B8 / Reserve;0V-Kamm / -B8;-W21;0,34 mm²;bei Mikroschalter (2-Leiter) Reserve
 -X2:45;+3,3 V B9;-A1 (DS2482-100) / -B9 VDD;-W22 PUR 3×0,34 geschirmt [A];0,34 mm²;Außentemperatur DS18B20, +A
 -X2:46;1-Wire DQ B9;-A1.U13 DS2482-100 / -B9 DQ;-W22;0,34 mm²;TVS/ESD am Stecker [A]

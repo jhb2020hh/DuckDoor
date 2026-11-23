@@ -21,9 +21,8 @@ BMK;Benennung;Typ/Hersteller;Bemerkung
 =DD+K1-A1.U11;Digitaleingang isoliert, 2-kanalig (5. Baustein);TI ISO1212;[A] für IN6 B8 + Reserve IN10
 =DD+K1-A1.U7;Echtzeituhr;Analog Devices DS3231SN;−40…+85 °C, CR2032 oder Superkondensator
 =DD+K1-A1.U8;Temperatur-/Feuchtesensor Kasten;Sensirion SHT4x [A];I²C onboard
-=DD+K1-A1.U9;Differenzieller I²C-Puffer;NXP PCA9615;entfällt [A] (Lux im Gehäuse, Freigabe E5)
 =DD+K1-A1.U10;I²C-Port-Expander;TI TCA9534;Status-LED, Reserve
-=DD+K1-A1.U12;Logikgatter Hardware-Sperre;74LVC1G08 / 74LVC1G32 / 74LVC1G00 [A];ENN = NOT(EN_CPU AND (DIR_AUF OR (K1_OK AND B6_FREI)))
+=DD+K1-A1.U12a…e;Logikgatter Hardware-Sperre ZU (diskret);2× 74LVC1G08, 2× 74LVC1G32, 1× 74LVC1G00 [A];SPERRE_ZU = B6 ∨ B7 ∨ (B8 ∧ ¬B1), ENN = NOT(EN_CPU AND (DIR_AUF OR (K1_OK AND B6_FREI AND (B8_ANL OR B1_UNTEN))))
 =DD+K1-A1.U13;I²C-1-Wire-Master;Analog Devices DS2482-100 [A];für Außentemperatur -B9
 =DD+K1-A1.U14;DC/DC-Wandler 24 → 5 V, ≥ 1 A;Typ offen [A];Synchronwandler, davor Verpolschutz, TVS SMBJ33A, LC
 =DD+K1-A1.U15;LDO 3,3 V, ≥ 600 mA;Typ offen [A];
@@ -39,8 +38,8 @@ BMK;Benennung;Typ/Hersteller;Bemerkung
 =DD+M-M1;Schrittmotor NEMA 17, 48 mm, ≥ 0,59 Nm;z. B. StepperOnline 17HS19-2004S1 [A];Betrieb ≤ 1,0 A RMS, verriegelbarer Stecker
 =DD+M-B3;Endlage Mutter oben;Induktiver Näherungsschalter M12 PNP NO, 24 V, IP67, ≥ −25 °C [A];
 =DD+M-B4;Endlage Mutter unten;Induktiver Näherungsschalter M12 PNP NO, 24 V, IP67, ≥ −25 °C [A];
-=DD+M-B8;Schlaffschalter Mitnehmer;Mikroschalter oder Reedkontakt, IP67 [A];Freigabe M6, meldet Bolzen am oberen Langlochende
-=DD+R-B1;Schieber unten;Induktiver Näherungsschalter M12 PNP NO, 24 V, IP67 [A];Schaltfenster ≤ 2 mm
+=DD+M-B8;Schlaffschalter Mitnehmer;Mikroschalter oder Reedkontakt, IP67 [A];Freigabe M6, Hardware-Sperre ZU außer bei B1 aktiv, meldet Bolzen am oberen Langlochende
+=DD+R-B1;Schieber unten;Induktiver Näherungsschalter M12 PNP NO, 24 V, IP67 [A];Schaltfenster ≤ 2 mm, wirkt in Hardware-Sperre (hebt B8-Sperre beim Verriegeln auf)
 =DD+R-B2;Schieber oben;Induktiver Näherungsschalter M12 PNP NO, 24 V, IP67 [A];
 =DD+R-B6.1;Lichtschranke Sender;Marantec 99165 (Einweg, 12–24 V AC/DC, IP65);−20…+60 °C, Auslegung −10 °C (Bauherr), getestet über -X2:30
 =DD+R-B6.2;Lichtschranke Empfänger, Relais-Wechsler;Marantec 99165;Satz mit -B6.1, 2 Strahlen z +100/+300 [A] → ggf. 2 Sätze

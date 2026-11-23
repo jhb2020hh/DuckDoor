@@ -94,20 +94,22 @@
 <line x1="1100" y1="212" x2="1100" y2="260" class="s24"/>
 <text x="1108" y="192" font-size="10" text-anchor="start" class="t b">-F11 2 A T</text>
 <text x="1106" y="252" font-size="9" text-anchor="start" class="t b">VM</text>
-<rect x="1000" y="410" width="210" height="116" rx="0" class="boxg"/>
-<text x="1105" y="426" font-size="9.2" text-anchor="middle" class="t b">Hardware-Sperre ZU</text>
-<text x="1105" y="442" font-size="9.2" text-anchor="middle" class="t">-A1.U12 74LVC1G08/32/00 [A]</text>
-<text x="1105" y="458" font-size="9.2" text-anchor="middle" class="t">ENN = ¬( EN_CPU ∧</text>
-<text x="1105" y="474" font-size="9.2" text-anchor="middle" class="t">(DIR_AUF ∨ (K1_OK ∧ B6_FREI)))</text>
-<text x="1105" y="490" font-size="9.2" text-anchor="middle" class="t">K1_OK/B6_FREI von ISO1212</text>
-<text x="1105" y="506" font-size="9.2" text-anchor="middle" class="t">ENN Pull-up 10 kΩ → Reset gesperrt</text>
+<rect x="1000" y="410" width="210" height="122" rx="0" class="boxg"/>
+<text x="1105" y="423.0" font-size="8.8" text-anchor="middle" class="t b">Hardware-Sperre ZU (diskret)</text>
+<text x="1105" y="436.5" font-size="8.8" text-anchor="middle" class="t">SPERRE_ZU = B6 ∨ B7 ∨ (B8 ∧ ¬B1)</text>
+<text x="1105" y="450.0" font-size="8.8" text-anchor="middle" class="t">ENN = ¬( EN_CPU ∧ ( DIR_AUF ∨</text>
+<text x="1105" y="463.5" font-size="8.8" text-anchor="middle" class="t">(K1_OK ∧ B6_FREI ∧</text>
+<text x="1105" y="477.0" font-size="8.8" text-anchor="middle" class="t">(B8_ANL ∨ B1_UNTEN))))</text>
+<text x="1105" y="490.5" font-size="8.8" text-anchor="middle" class="t">-A1.U12a–e: 2×1G08, 2×1G32, 1G00</text>
+<text x="1105" y="504.0" font-size="8.8" text-anchor="middle" class="t">Eing. ISO1212 IN1/IN5/IN6/IN7</text>
+<text x="1105" y="517.5" font-size="8.8" text-anchor="middle" class="t">ENN Pull-up 10 kΩ → Reset gesperrt</text>
 <line x1="1105" y1="410" x2="1105" y2="382" class="s24"/>
 <path d="M1105,382 L1107.7,388.4 L1102.3,388.4 Z" class="dot"/>
 <text x="1111" y="400" font-size="9.5" text-anchor="start" class="t b">ENN</text>
-<rect x="1000" y="550" width="210" height="60" rx="0" class="box"/>
-<text x="1105" y="566" font-size="9.2" text-anchor="middle" class="t">LS-Test: P-MOSFET in +24 V</text>
-<text x="1105" y="581" font-size="9.2" text-anchor="middle" class="t">Sender; Pulldown → Boot EIN</text>
-<text x="1105" y="596" font-size="9.2" text-anchor="middle" class="t">24V_FLD von -F14</text>
+<rect x="1000" y="552" width="210" height="60" rx="0" class="box"/>
+<text x="1105" y="568" font-size="9.2" text-anchor="middle" class="t">LS-Test: P-MOSFET in +24 V</text>
+<text x="1105" y="583" font-size="9.2" text-anchor="middle" class="t">Sender; Pulldown → Boot EIN</text>
+<text x="1105" y="598" font-size="9.2" text-anchor="middle" class="t">24V_FLD von -F14</text>
 <rect x="1000" y="640" width="210" height="70" rx="0" class="box"/>
 <text x="1105" y="657" font-size="9.2" text-anchor="middle" class="t">Heizungs-MOSFET Low-Side</text>
 <text x="1105" y="673" font-size="9.2" text-anchor="middle" class="t">Logic-Level ≥ 5 A</text>
@@ -130,8 +132,7 @@
 <text x="608" y="790" font-size="9.3" text-anchor="start" class="t">-A1.U8 SHT4x (Temp./r. F.)</text>
 <text x="608" y="807" font-size="9.3" text-anchor="start" class="t">-A1.U10 TCA9534 → -P1</text>
 <text x="608" y="824" font-size="9.3" text-anchor="start" class="t">-A1.U13 DS2482-100 1-Wire [A]</text>
-<text x="608" y="841" font-size="9.3" text-anchor="start" class="t">-A1.U9 PCA9615 entfällt [A]</text>
-<text x="608" y="858" font-size="9.3" text-anchor="start" class="t">Stecker -A1:XB5 → -B5 (intern)</text>
+<text x="608" y="841" font-size="9.3" text-anchor="start" class="t">Stecker -A1:XB5 → -B5 (intern)</text>
 <line x1="720" y1="700" x2="720" y2="740" class="sig"/>
 <line x1="712" y1="718" x2="728" y2="722" class="sig"/>
 <line x1="865" y1="700" x2="865" y2="960" class="s24"/>
@@ -328,11 +329,11 @@
 <line x1="1600" y1="680" x2="1210" y2="680" class="s24"/>
 <text x="1420" y="674" font-size="8.8" text-anchor="middle" class="t">HEAT (−) zum Low-Side-MOSFET</text>
 <text x="40" y="1012" font-size="9.6" text-anchor="start" class="t b">Hinweise / Annahmen</text>
-<text x="40" y="1025" font-size="9.6" text-anchor="start" class="t">• Hardware-Sperre: Bei ausgelöster -B7 (K1_OK = 0) oder unterbrochener -B6 (B6_FREI = 0) ist nur AUF</text>
-<text x="40" y="1038" font-size="9.6" text-anchor="start" class="t">  möglich – unabhängig von der Firmware (Freigabe E3). Einbindung -B8 in die Sperre: offen (11_R2 Empf. 3).</text>
+<text x="40" y="1025" font-size="9.6" text-anchor="start" class="t">• Hardware-Sperre: Bei ausgelöster -B7, unterbrochener -B6 oder -B8 schlaff (B1 nicht aktiv) ist nur AUF</text>
+<text x="40" y="1038" font-size="9.6" text-anchor="start" class="t">  möglich – unabhängig von der Firmware (Freigabe E3). -B8 sperrt ZU, außer bei B1 aktiv (Verriegelungshub).</text>
 <text x="40" y="1051" font-size="9.6" text-anchor="start" class="t">• LS-Test vor jedem Schließen: GPIO18 schaltet den Sender ab, IN5 muss „unterbrochen“ melden.</text>
 <text x="40" y="1064" font-size="9.6" text-anchor="start" class="t">• -B8 Schlaffschalter (Freigabe M6) an IN6/GPIO4 über 5. ISO1212 -A1.U11 [A]; 1-Wire -B9 daher über</text>
-<text x="40" y="1077" font-size="9.6" text-anchor="start" class="t">  I²C-Bridge DS2482-100 -A1.U13 [A]. Lux -B5 hinter Deckelfenster (E5) → -X2:22…28 entfallen.</text>
+<text x="40" y="1077" font-size="9.6" text-anchor="start" class="t">  I²C-Bridge DS2482-100 -A1.U13 [A]. Lux -B5 hinter Deckelfenster (E5), kein Außenkabel.</text>
 <text x="40" y="1090" font-size="9.6" text-anchor="start" class="t">• SELV: 0 V nicht mit PE verbinden. Motor nie unter Spannung stecken (TMC2209).</text>
 <rect x="20" y="20" width="1640" height="1148" rx="0" class="frame"/>
 <rect x="1040" y="1008" width="620" height="160" rx="0" class="box"/>

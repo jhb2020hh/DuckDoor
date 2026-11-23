@@ -66,15 +66,16 @@ s.line(1100, 212, 1100, 260, "s24")
 s.text(1108, 192, "-F11 2 A T", 10, bold=True)
 s.text(1106, 252, "VM", 9, bold=True)
 
-s.rect(RX, 410, RW, 116, "boxg")
-s.mtext(RX + 105, 426, ["Hardware-Sperre ZU", "-A1.U12 74LVC1G08/32/00 [A]", "ENN = ¬( EN_CPU ∧",
-                        "(DIR_AUF ∨ (K1_OK ∧ B6_FREI)))", "K1_OK/B6_FREI von ISO1212", "ENN Pull-up 10 kΩ → Reset gesperrt"],
-        9.2, 16, "middle", True)
+s.rect(RX, 410, RW, 122, "boxg")
+s.mtext(RX + 105, 423, ["Hardware-Sperre ZU (diskret)", "SPERRE_ZU = B6 ∨ B7 ∨ (B8 ∧ ¬B1)",
+                        "ENN = ¬( EN_CPU ∧ ( DIR_AUF ∨", "(K1_OK ∧ B6_FREI ∧", "(B8_ANL ∨ B1_UNTEN))))",
+                        "-A1.U12a–e: 2×1G08, 2×1G32, 1G00", "Eing. ISO1212 IN1/IN5/IN6/IN7",
+                        "ENN Pull-up 10 kΩ → Reset gesperrt"], 8.8, 13.5, "middle", True)
 s.arrow(1105, 410, 1105, 382, "s24")
 s.text(1111, 400, "ENN", 9.5, bold=True)
 
-s.rect(RX, 550, RW, 60, "box")
-s.mtext(RX + 105, 566, ["LS-Test: P-MOSFET in +24 V", "Sender; Pulldown → Boot EIN", "24V_FLD von -F14"], 9.2, 15, "middle")
+s.rect(RX, 552, RW, 60, "box")
+s.mtext(RX + 105, 568, ["LS-Test: P-MOSFET in +24 V", "Sender; Pulldown → Boot EIN", "24V_FLD von -F14"], 9.2, 15, "middle")
 s.rect(RX, 640, RW, 70, "box")
 s.mtext(RX + 105, 657, ["Heizungs-MOSFET Low-Side", "Logic-Level ≥ 5 A", "Gate-Pulldown 100 kΩ (Boot AUS)"],
         9.2, 16, "middle")
@@ -92,7 +93,7 @@ s.text(940, 674, "GPIO23", 8.5, "middle")
 # I2C-Block
 s.rect(600, 740, 240, 140, "box")
 s.mtext(608, 756, ["I²C-Bus GPIO21/22, 4,7 kΩ", "-A1.U7 DS3231SN + CR2032", "-A1.U8 SHT4x (Temp./r. F.)",
-                   "-A1.U10 TCA9534 → -P1", "-A1.U13 DS2482-100 1-Wire [A]", "-A1.U9 PCA9615 entfällt [A]",
+                   "-A1.U10 TCA9534 → -P1", "-A1.U13 DS2482-100 1-Wire [A]",
                    "Stecker -A1:XB5 → -B5 (intern)"], 9.3, 17, bold_first=True)
 s.line(720, 700, 720, 740, "sig")
 s.line(712, 718, 728, 722, "sig")
@@ -197,11 +198,11 @@ s.text(1420, 674, "HEAT (−) zum Low-Side-MOSFET", 8.8, "middle")
 # ---------------- Hinweise ----------------
 s.mtext(40, 1012, [
     "Hinweise / Annahmen",
-    "• Hardware-Sperre: Bei ausgelöster -B7 (K1_OK = 0) oder unterbrochener -B6 (B6_FREI = 0) ist nur AUF",
-    "  möglich – unabhängig von der Firmware (Freigabe E3). Einbindung -B8 in die Sperre: offen (11_R2 Empf. 3).",
+    "• Hardware-Sperre: Bei ausgelöster -B7, unterbrochener -B6 oder -B8 schlaff (B1 nicht aktiv) ist nur AUF",
+    "  möglich – unabhängig von der Firmware (Freigabe E3). -B8 sperrt ZU, außer bei B1 aktiv (Verriegelungshub).",
     "• LS-Test vor jedem Schließen: GPIO18 schaltet den Sender ab, IN5 muss „unterbrochen“ melden.",
     "• -B8 Schlaffschalter (Freigabe M6) an IN6/GPIO4 über 5. ISO1212 -A1.U11 [A]; 1-Wire -B9 daher über",
-    "  I²C-Bridge DS2482-100 -A1.U13 [A]. Lux -B5 hinter Deckelfenster (E5) → -X2:22…28 entfallen.",
+    "  I²C-Bridge DS2482-100 -A1.U13 [A]. Lux -B5 hinter Deckelfenster (E5), kein Außenkabel.",
     "• SELV: 0 V nicht mit PE verbinden. Motor nie unter Spannung stecken (TMC2209).",
 ], 9.6, 13, bold_first=True)
 
