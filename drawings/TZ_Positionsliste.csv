@@ -1,0 +1,51 @@
+Pos;Benennung;Werkstoff;Abmessung;Menge
+1;Streifenfundament;Beton C25/30 [A];800 × 300 × 800 (L × B × T), OK +20 über Gelände;1
+2;Untergrabschutz-Schürze;Schweißgitter feuerverzinkt;Masche ≤ 25 × 25, Draht ≥ 2,0, 1000 × 1000, 50–100 unter Gelände;2
+3;Abspannpfosten Zaun;Stahl feuerverzinkt;nach Zaunsystem [A], Abstand ≤ 100 zur Einheit;2
+4;Spaltabdeckung Zaunanschluss;Lochblech oder Schweißgitter feuerverzinkt;ca. 60 × 1140 [A], Restspalt ≤ 25, verschraubt;2
+5;Fußplatte;S235JR feuerverzinkt;160 × 160 × 10, 4 × Ø14, Lochbild 110 × 110, außermittig [A];2
+6;Verbundanker;A4-70;M12, Setztiefe nach Hersteller [A];8
+7;Pfosten;S235JRH feuerverzinkt (EN ISO 1461);Quadratrohr 60 × 60 × 3, L 1130 (z +10…+1140);2
+8;Führungsträger;EN AW-6060 T66;Winkel 40 × 40 × 4, L 1140;2
+9;Führungsprofil;PE-UHMW;36 × 26, Nut 6 × 30 (Nutgrund x ±205), L 1140 [A];2
+10;Kanalwange;EN AW-5754;Kantprofil 48 × 40 × 4, L 595 (z +545…+1140) [A];2
+11;Schwellenwinkel;EN AW-6060;Winkel 50 × 30 × 4, L 350 [A], OK +30;1
+12;Gummipuffer;EPDM 60 Shore A [A];16 × 5, L 350;1
+13;Schieberblech;EN AW-5754 H22;400 × 535 × 4, Kanten entgratet;1
+14;Schaltleiste -B7 (Kaufteil, E-Stückliste);ASO SENTIR edge 8,2 kΩ;H 25, B ≤ 12, L 340 [A];1
+15;Mitnehmerlasche;1.4404;110 × 40 × 4, Langloch 9 H11 (Mittenabstand 52), Rastkerbe 6 × 10;1
+16;Senkschraube mit Sicherungsmutter;A4-70;ISO 10642 M5 × 12;2
+17;Mitnehmerbolzen;1.4404;Ø8 h9 × 28 mit Gewindezapfen M6 × 8 [A];1
+18;Mutterblock;EN AW-6082 T6;30 × 30 × 40;1
+19;Spindelmutter, trockenlaufend;Gleitkunststoff (z. B. iglidur) [A];Tr8 × 2, Ø22 × 22 [A];1
+20;Gewindespindel;1.4301 gerollt [A];Tr8 × 2 rechts eingängig, L 735, Zapfen Ø6 k6 × 30 (unten) / × 35 (oben);1
+21;Lagerbock Festlager;EN AW-6082 T6;40 × 30 × 20 mit Zentrierbund Ø22 × 10 [A];1
+22;Rillenkugellager;Wälzlagerstahl (Kaufteil);626-2RS (6 × 19 × 6);3
+23;Wellenmutter mit Sicherungsscheibe;A4;M6 [A];1
+24;Distanzhülse;1.4301;Ø10 / Ø6,1 × 6 [A];1
+25;Sicherungsring für Bohrung;Federstahl;DIN 472 – 19 × 1;1
+26;Lagerplatte Loslager;EN AW-5754;120 × 60 × 10 [A], Bohrung Ø19 H7 (Loslager, axial frei);1
+27;Klauenkupplung mit Elastomerstern;Al / Elastomer 92 Shore A;Ø20 × 30, Bohrungen 6 / 5;1
+28;Motorplatte;EN AW-5754;120 × 60 × 4 [A];1
+29;Distanzbolzen;A4;M4 × 36 [A];4
+30;Schrittmotor -M1 (Kaufteil, E-Stückliste);–;NEMA 17, 42 × 42 × 48, ≥ 0,59 Nm, Welle Ø5;1
+31;Traverse (Kanalboden);EN AW-5754;Kantteil t 3, 57 × 15, L 430, Ablauf Ø6;1
+32;Abstreiflippe;EPDM;6 × 8, L 400 [A];1
+33;Sturzblende;EN AW-5754;430 × 610 × 3;1
+34;Sicherheitsschraube;A4;M5 × 10, Torx mit Stift [A];12
+35;Antriebskasten;EN AW-5754;t 2, außen 550 × 140 × 260 (B × T × H);1
+36;Kastendeckel, abnehmbar;EN AW-5754;t 2, ≈ 560 × 150, Gefälle ≥ 10° zur −y-Seite;1
+37;Druckausgleichselement;PA / ePTFE;M12 × 1,5 [A];1
+38;Bürstendichtung Kanal/Kasten;PA-Borste, Al-Träger;L 430 [A];1
+39;Schwerkraftklinke;1.4404;t 4, ≈ 46 × 54 [A], Zahn 4 × 6;1
+40;Klinkenachse;A4;Ø6 × 20 mit Sicherungsscheibe [A];1
+41;Klinkenhalter mit Anschlag;1.4404;Flach 8 × 4, ≈ 135 hoch [A];1
+42;Entriegelungskulisse (am Mutterblock);1.4404;t 4, 19 × 40, Anlaufschrägen 8 × 45° [A];1
+43;Endschalter -B1 Schieber unten (E-Stückliste);Kaufteil;Schaltpunkt UK Schieber ≤ +32;1
+44;Endschalter -B2 Schieber oben (E-Stückliste);Kaufteil;Schaltpunkt OK Schieber ≥ +1110;1
+45;Endschalter -B3 Mutter oben (E-Stückliste);Kaufteil;Schaltpunkt Bolzen +1200;1
+46;Endschalter -B4 Mutter unten (E-Stückliste);Kaufteil;Schaltpunkt Bolzen +594;1
+47;Schlaffschalter -B8 (E-Stückliste);Kaufteil;Reedkontakt am Mutterblock + Magnet an Lasche [A], schaltet bei ≥ 3 Abhub;1
+48;Lichtschranke -B6 (E-Stückliste);Marantec 99165;Strahlen z +100 / +300, y +20;2
+49;Anschlussfahne Schutzpotentialausgleich;A4;M8 [A];2
+50;Warnschild (Kinder, automatisch schließend);Kunststoff UV-beständig;100 × 100 [A];2
