@@ -157,7 +157,20 @@ def build() -> list[Part]:
     lp = box(-60, 60, 5, 65, 1245, 1255).cut(cyl_z(0, SP_Y, 1244, 1256, 19))
     add("P26_Lagerplatte_Loslager", "26", lp, "EN AW-5754", "ANTRIEB", C_ALU,
         note="120×60×10, Ø19 H7; [A] M4-Gewinde für Pos 29 nicht modelliert; "
-             "Befestigung im Kasten (35) offen")
+             "[A] Integration: Befestigung im Kasten (35) über Haltewinkel 26a")
+
+    # Pos 26a Haltewinkel Lagerplatte [A, Integration]: Z-Kantteil t 3, Fuß auf Kastenboden
+    # (y +68…+96, außerhalb Bodenöffnung y −3…+65), Steg y +65…+68, Kopf unter Lagerplatte.
+    for side, sx in (("links", 1), ("rechts", -1)):
+        x0, x1 = sorted((sx * 32, sx * 60))
+        hw = (box(x0, x1, 65, 96, 1142, 1145)          # Fuß auf Kastenboden (OK Boden +1142)
+              .union(box(x0, x1, 65, 68, 1145, 1242))  # Steg
+              .union(box(x0, x1, 45, 68, 1242, 1245)))  # Kopf unter Lagerplatte 26
+        hw = hw.cut(cyl_z(sx * 46, 82, 1141, 1146, 4.5)).cut(cyl_z(sx * 46, 55, 1241, 1246, 4.5))
+        add(f"P26a_Haltewinkel_Lagerplatte_{side}", "26a", hw, "EN AW-5754", "ANTRIEB", C_ALU,
+            note="[A] Integration (neu): Z-Kantteil t 3, B 28, x ±32…±60; Fuß auf Kastenboden 35 "
+                 "(y +65…+96), Kopf y +45…+68 unter Lagerplatte 26; je 1× Ø4,5 für M4 (Boden: "
+                 "Blindnietmutter, Lagerplatte: Gewinde M4) – Schrauben nicht modelliert")
 
     # Pos 27 Klauenkupplung Ø20×30, z 1260…1290
     ku = (cyl_z(0, SP_Y, 1260, 1272, 20).union(cyl_z(0, SP_Y, 1272, 1278, 18))

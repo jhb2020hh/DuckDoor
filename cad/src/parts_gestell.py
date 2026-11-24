@@ -9,7 +9,7 @@ Seitenbezeichnung [A]: „links“ = +x, „rechts“ = −x, wie in der Vordera
 
 Nicht modelliert (Team „Antrieb“ bzw. bauseits): Pos 3, 13–30, 39–48, Schaltleiste B7.
 Freiraum: Nut der Führung (x ±175…±205, y ±3), Kanal y +8…+62 / z +545…+1140
-(Spindel y 35, Mutterblock, Lasche), Kasteninnenraum, Durchtritt Bürstendichtung x ±25.
+(Spindel y 35, Mutterblock, Lasche), Kasteninnenraum, Durchtritt Bürstendichtung x −38…+25 ([A] Integration).
 """
 import math
 
@@ -198,10 +198,12 @@ def build() -> list[Part]:
     P.append(Part("P37_Druckausgleichselement", "37", dae, "PA / ePTFE", "KAUFTEIL", C_KUNSTSTOFF_S,
                   kaufteil=True, note="vereinfacht: Kopf Ø20 × 6 außen, Gewinde M12, Mutter Ø18 innen [A]."))
     # Pos 38 Bürstendichtung im Bodenausschnitt, Durchtritt x ±25 offen (A10)
-    bd = box(-215, -25, -3, 65, Z_TOP, Z_TOP + 6).union(box(25, 215, -3, 65, Z_TOP, Z_TOP + 6))
+    bd = box(-215, -38, -3, 65, Z_TOP, Z_TOP + 6).union(box(25, 215, -3, 65, Z_TOP, Z_TOP + 6))
     P.append(Part("P38_Buerstendichtung", "38", bd, "PA-Borste, Al-Träger", "KAUFTEIL", C_KUNSTSTOFF_S,
                   kaufteil=True, note="vereinfacht als Hüllkörper z +1140…+1146; [A] Durchtritt "
-                                      "Lasche/Mutterblock/Spindel x ±25 offen (A10)."))
+                                      "Lasche/Mutterblock/Spindel offen (A10). [A] Integration: Durchtritt "
+                                      "von x ±25 auf x −38…+25 erweitert, da Entriegelungskulisse 42 "
+                                      "(x −34…−15) beim Hub nach AUF die Dichtung durchfährt."))
     # Pos 50 Warnschilder 100 × 100
     P.append(Part("P50_Warnschild_Entenseite", "50", box(110, 210, KASTEN_Y1, KASTEN_Y1 + 1.5, 1230, 1330),
                   "Kunststoff UV-beständig", "KASTEN", C_WARN,

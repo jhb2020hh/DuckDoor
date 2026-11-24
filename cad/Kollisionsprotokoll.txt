@@ -1,0 +1,19 @@
+Kollisionsprotokoll DuckDoor (automatisch erzeugt von build_assembly.py)
+Kriterium: Schnittvolumen > 1.0 mm³. Parts: 85.
+
+1) Zustand ZU_VERRIEGELT, alle Paare (3570): 0 Kollision(en)
+
+2) Zustand AUF (Schieber-Teile +550, Block-Teile +601 in z)
+   bewegt: P13_Schieberblech (+550), P14_Schaltleiste_B7 (+550), P15_Mitnehmerlasche (+550), P16_Senkschraube_1 (+550), P16_Senkschraube_2 (+550), P17_Mitnehmerbolzen (+601), P18_Mutterblock (+601), P19_Spindelmutter (+601), P42_Entriegelungskulisse (+601), P47_Schlaffschalter_B8_Reed (+601), P47_Schlaffschalter_B8_Magnet (+550)
+   bewegt gegen fest (814 Paare): 0 Kollision(en)
+   bewegt gegen bewegt (55 Paare): 0 Kollision(en)
+
+3) Hubweg ZU -> AUF (101 Zwischenstellungen, reine z-Translation, Klinke starr) – Information, kein Endlagenkriterium:
+   P14_Schaltleiste_B7 <-> P32_Abstreiflippe: Hub 500.5…528.0 mm, max 7565 mm³
+      Bewertung: OFFEN: Schaltleiste (y ±6) streift beim Einfahren in den Kanal (Hub ≈ 500…528) die Abstreiflippe (y +2…+8, z +530…+538) – Überdeckung 4 mm, EPDM gegen EPDM; Risiko Fehlauslösung B7 / Verschleiß. Vorschlag: Lippe in diesem Bereich ausklinken oder Schaltleiste-Freigabe B7 oberhalb z ≈ +500 per Software maskieren (Team Mechanik/EL entscheiden).
+   P15_Mitnehmerlasche <-> P39_Schwerkraftklinke: Hub 5.5…82.5 mm, max 96 mm³
+      Bewertung: funktional: Klinkenzahn liegt in der Rastkerbe der Lasche; vor dem Hub schwenkt die Kulisse 42 die Klinke aus (Drehung um x −22/z +670 hier nicht simuliert) – keine Kollision im Betrieb.
+   P16_Senkschraube_2 <-> P39_Schwerkraftklinke: Hub 71.5…77.0 mm, max 18 mm³
+      Bewertung: funktional wie oben (Schraubenkopf/-mutter x −12 passiert die ausgeschwenkte Klinke).
+   P42_Entriegelungskulisse <-> P39_Schwerkraftklinke: Hub 24.0…72.1 mm, max 336 mm³
+      Bewertung: beabsichtigt: Kulissenschräge drückt den Klinken-Lug (y +16…+20) und hebt die Klinke aus.
